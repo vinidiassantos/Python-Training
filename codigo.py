@@ -1,4 +1,4 @@
-# Function for nth Fibonacci number
+# Function for nth Fibonacci sequence number
 
 def Fibonacci(n):
 	if n<= 0:
