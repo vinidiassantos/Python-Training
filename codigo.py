@@ -1,17 +1,25 @@
-# Function for nth Fibonacci sequence
+from PyQt5 import  uic,QtWidgets
 
-def Fibonacci(n):
-	if n<= 0:
-		print("Incorrect input")
-	# First Fibonacci number is 0
-	elif n == 1:
-		return 0
-	# Second Fibonacci number is 1
-	elif n == 2:
-		return 1
-	else:
-		return Fibonacci(n-1)+Fibonacci(n-2)
+def funcao_principal():
+    linha1 = formulario.lineEdit.text()
+    linha2 = formulario.lineEdit_2.text()
+    linha3 = formulario.lineEdit_3.text()
+    
+    if formulario.radioButton.isChecked() :
+        print("Categoria Eletronicos selecionada")
+    elif formulario.radioButton_2.isChecked() :
+        print("Categoria Informatica selecionada")
+    else :
+        print("Categoria Alimentos selecionada")
 
-# Driver Program
+    print("Código:",linha1)
+    print("Descricao:",linha2)
+    print("Preco",linha3)
+    
 
-print(Fibonacci(10))
+app=QtWidgets.QApplication([])
+formulario=uic.loadUi("formulario2.ui")
+formulario.pushButton.clicked.connect(funcao_principal)
+
+formulario.show()
+app.exec()
