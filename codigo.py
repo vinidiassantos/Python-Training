@@ -10,7 +10,7 @@ def funcao_principal():
     elif formulario.radioButton_2.isChecked() :
         print("Categoria Informatica selecionada")
     else :
-        print("Categoria Alimentos selecionada")
+        print("Categoria Alimentos ")
 
     print("Código:",linha1)
     print("Descricao:",linha2)
