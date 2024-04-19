@@ -5,7 +5,6 @@ def funcao_principal():
     linha2 = formulario.lineEdit_2.text()
     linha3 = formulario.lineEdit_3.text()
     linha4 = formulario.lineEdit_4.text()
-    linha5 = formulario.lineEdit_5.text()
     
     if formulario.radioButton.isChecked() :
         print("Categoria Eletronicos selecionada")
@@ -18,7 +17,6 @@ def funcao_principal():
     print("Descricao:",linha2)
     print("Preco",linha3)
     print("Preco",linha4)
-    print("Preco",linha5)
     
     
 
