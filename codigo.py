@@ -4,7 +4,6 @@ def funcao_principal():
     linha1 = formulario.lineEdit.text()
     linha2 = formulario.lineEdit_2.text()
     linha3 = formulario.lineEdit_3.text()
-
    
     if formulario.radioButton.isChecked() :
         print("Categoria Eletronicos selecionada")
@@ -15,9 +14,7 @@ def funcao_principal():
 
     print("Código:",linha1)
     print("Descricao:",linha2)
-    print("Preco",linha3)
-    
-    
+    print("Preco",linha3) 
 
 app=QtWidgets.QApplication([])
 formulario=uic.loadUi("formulario2.ui")
@@ -26,14 +23,8 @@ formulario.pushButton.clicked.connect(funcao_principal)
 formulario.show()
 app.exec()
 
-if num < 0:
-   print("This factorial does not exist for negative numbers")
-elif num == 0:
-   print("The factorial of 0 is 1")
-else:
-   for i in range(1,num + 1):
-       factorial = factorial*i
-   print("The factorial of",num,"is",factorial)
+# Python program to find the factorial of a number provided by the user
+# using recursion
 
 def factorial(x):
     """This is a recursive function
@@ -44,3 +35,14 @@ def factorial(x):
     else:
         # recursive call to the function
         return (x * factorial(x-1))
+
+
+# change the value for a different result
+num = 7
+
+# to take input from the user
+# num = int(input("Enter a number: "))
+
+# call the factorial function
+result = factorial(num)
+print("The factorial of", num, "is", result)
