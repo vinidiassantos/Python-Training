@@ -27,10 +27,20 @@ formulario.show()
 app.exec()
 
 if num < 0:
-   print("Sorry, factorial does not exist for negative numbers")
+   print("This factorial does not exist for negative numbers")
 elif num == 0:
    print("The factorial of 0 is 1")
 else:
    for i in range(1,num + 1):
        factorial = factorial*i
    print("The factorial of",num,"is",factorial)
+
+def factorial(x):
+    """This is a recursive function
+    to find the factorial of an integer"""
+
+    if x == 1:
+        return 1
+    else:
+        # recursive call to the function
+        return (x * factorial(x-1))
