@@ -11,6 +11,8 @@ def funcao_principal():
         print("Categoria Informatica selecionada")
     else :
         print("Categoria Alimentos selecionada")
+        def date_master(user):
+            
 
     print("Código:",linha1)
     print("Descricao:",linha2)
