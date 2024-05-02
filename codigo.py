@@ -1,4 +1,5 @@
 from PyQt5 import  uic,QtWidgets
+from __future__import divmod
 
 def funcao_principal():
     linha1 = formulario.lineEdit.text()
@@ -6,6 +7,9 @@ def funcao_principal():
     linha3 = formulario.lineEdit_3.text()
         for i in [1, 2, 3, 4, 5]:
         print i
+    match = 10
+    from re import
+    print match
    
     if formulario.radioButton.isChecked() :
         print("Categoria Eletronicos selecionada")
