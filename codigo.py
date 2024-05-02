@@ -7,6 +7,12 @@ def funcao_principal():
     linha3 = formulario.lineEdit_3.text()
         for i in [1, 2, 3, 4, 5]:
         print i
+    
+def __new__(cls, original_value):
+    object = unicode.new__(cls, original_value)
+    object.original_value = original_value
+    return object
+
     match = 10
     from re import
     print match
