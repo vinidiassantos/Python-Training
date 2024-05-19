@@ -1,6 +1,6 @@
 # sintaxe:
 # print(objetos, argumentos)
 
-nome = 'vinicius santos'
-canal = 'treinamentos'
-print(canal, '-', nome)
+nome = input('digite seu nome: ')
+msg = 'ola ' + nome + '! bem-vindo ao curso de python!'
+print(msg)
