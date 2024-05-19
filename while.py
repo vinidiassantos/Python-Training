@@ -1,6 +1,9 @@
-num = 1
+nome = None
 
-while (num <= 1000):
-    print(num)
-    num += 1
-print('laço encerrado!')
+while True:
+    print('digite seu nome, ou x para parar:')
+    nome = input()
+    if nome == 'x' or nome == 'x':
+            break
+    print(f'bem vindo, {nome}')
+print('até logo!')
