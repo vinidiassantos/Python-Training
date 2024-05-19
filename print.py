@@ -1,8 +1,7 @@
 # sintaxe:
 # print(objetos, argumentos)
 
-nome = 'vini'
-peso = 73
-msg = f'olá, meu nome é {nome} e eu {peso} quilos.'
-print(msg)
-
+a = 10
+b = 5
+res = f'a soma de {a} com {b} é igual a {a+b}'
+print(res)
