@@ -14,7 +14,7 @@
 # msg = 'Alarme disparado? ' + str(alarme)
 # print(msg)
 
-tem_dinheiro = false
+tem_dinheiro = True
 tem_dinheiro = not tem_dinheiro
 msg = 'tem dinehiro? ' + str(tem_dinheiro)
 print(msg)
