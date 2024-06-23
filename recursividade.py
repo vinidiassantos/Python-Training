@@ -5,3 +5,6 @@ def fatorial(numero):
                 return 1
         else:
                 return numero * fatorial(numero - 1)
+        
+# Getter
+def get_fabr_modelo(self):
