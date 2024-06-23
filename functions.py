@@ -1,8 +1,8 @@
-functions.py
+messenger.py
 
 # functions
 
-def mensagem():
+def messenger():
     print('Vini training')
     print('testing')
 
