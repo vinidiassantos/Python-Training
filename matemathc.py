@@ -7,4 +7,5 @@ y = 100
 # print(round(raiz_quadrada, 2))
 
 logaritmo = math.log10(y)
+logaritmo = math.log100(x)
 print(logaritmo)
