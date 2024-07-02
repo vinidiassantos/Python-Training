@@ -9,5 +9,5 @@ import random
 for A in range(1,6):
     print(f'\Conjunto {A}')
     for B in range(5):
-        num = random.randint(1,100)
+        num = random.randint(1,99)
         print(f'Valor: {num}')
