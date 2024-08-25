@@ -5,7 +5,6 @@ y = int(input('digite outro numero:'))
 
 z = x + y
 x = y - z
-y = z - x
 print()
 l=NotImplemented
 
