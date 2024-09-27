@@ -11,7 +11,7 @@ new_order_details = spark.createDataFrame([(11078, 1, 2, 18, 3)], ["OrderID", "P
 
 deltaTable_orders.alias("orders").merge(
     new_order.alias("newOrder"),
-    "orders.OrderID = orders")\
+    "orders.OrderID = newOrder")\
     .whenMatchedUpdate(set = {"CustomerID" : "newOrder.CustomerID", "EmployeeID" : "newOrder.EmployeeID", "OrderDate" : "newOrder.OrderDate"})\
     .whenNotMatchedInsert(values = {"OrderID" : "newOrder.OrderID", "CustomerID" : "newOrder.CustomerID", "EmployeeID" : "newOrder.EmployeeID", "OrderDate" : "newOrder.OrderDate"})\
     .execute()
