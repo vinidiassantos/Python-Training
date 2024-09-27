@@ -4,7 +4,6 @@ from delta.tables import *
 # Carregar tabelas Delta como DeltaTable
 deltaTable_orders = DeltaTable.forPath(spark, "dbfs:/FileStore/tables/datalake/delta/orders.delta")
 deltaTable_order_details = DeltaTable.forPath(spark, "dbfs:/FileStore/tables/datalake/delta/orderdetails.delta")
-deltaTable_orders = DeltaTable.forPath(spark, "dbfs:/FileStore/tables/datalake/delta/orders.delta")
 
 
 # Criar os novos registros que queremos inserir
