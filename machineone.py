@@ -20,5 +20,5 @@ deltaTable_order_details.alias("order_details").merge(
     new_order_details.alias("newOrderDetails", deltaTable_order_details),
     "order_details.OrderID = newOrderDetails.OrderID AND order_details.ProductID = newOrderDetails.ProductID")\
     .whenMatchedUpdate(set = {"UnitPrice" : "newOrderDetails.UnitPrice", "Quantity" : "newOrderDetails.Quantity"})\
-    .whenNotMatchedInsert(values = {"OrderID" , "ProductID" : "newOrderDetails.ProductID", "UnitPrice" : "newOrderDetails.UnitPrice", "Quantity" : "newOrderDetails.Quantity"})\
+    .whenNotMatchedInsert(values = {"OrderID" : "newOrderDetails.OrderID", "ProductID" : "newOrderDetails.ProductID", "UnitPrice" : "newOrderDetails.UnitPrice", "Quantity" : "newOrderDetails.Quantity"})\
     .execute()
