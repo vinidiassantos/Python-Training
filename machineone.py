@@ -13,7 +13,7 @@ deltaTable_orders.alias("orders").merge(
     new_order.alias("newOrder"),
     "orders.OrderID = orders")\
     .whenMatchedUpdate(set = {"CustomerID" : "newOrder.CustomerID", "EmployeeID" : "newOrder.EmployeeID", "OrderDate" : "newOrder.OrderDate"})\
-    .whenNotMatchedInsert(values = {"OrderID" : "newOrder.OrderID", "CustomerID" : "newOrder.CustomerID", "EmployeeID" : "newOrder.EmployeeID", "OrderDate" : "newOrder.OrderDate"})\
+    .whenNotMatchedInsert(values = {"OrderID" : "CustomerID" : "newOrder.CustomerID", "EmployeeID" : "newOrder.EmployeeID", "OrderDate" : "newOrder.OrderDate"})\
     .execute()
 
 deltaTable_order_details.alias("order_details").merge(
