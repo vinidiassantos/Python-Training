@@ -6,8 +6,8 @@ deltaTable_orders = DeltaTable.forPath(spark, "dbfs:/FileStore/tables/datalake/d
 deltaTable_order_details = DeltaTable.forPath(spark, "dbfs:/FileStore/tables/datalake/delta/orderdetails.delta")
 
 # Criar os novos registros que queremos inserir
-new_order = spark.createDataFrame([(11078, "ALFKI", 1, 2, 18, 32 "2023-08-01")], ["OrderID", "CustomerID", "EmployeeID", "OrderDate"])
-new_order_details = spark.createDataFrame([(11078, 1, 2, 18, 32)], ["OrderID", "ProductID", "UnitPrice", "Quantity"])
+new_order = spark.createDataFrame([(11078, "ALFKI", 1, 2, 18, "2023-08-01")], ["OrderID", "CustomerID", "EmployeeID", "OrderDate"])
+new_order_details = spark.createDataFrame([(11078, 1, 2, 18)], ["OrderID", "ProductID", "UnitPrice", "Quantity"])
 
 deltaTable_orders.alias("orders").merge(
     new_order.alias("newOrder"),
