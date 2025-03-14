@@ -7,13 +7,13 @@ deltaTable_order_details = DeltaTable.forPath(spark, "dbfs:/FileStore/tables/dat
 
 # Criar os novos registros que queremos inserir
 new_order = spark.createDataFrame([(11078, "ALFKI", 1, 18, "2023-08-01")], ["OrderID", "CustomerID", "EmployeeID", "OrderDate"])
-new_order_details = spark.createDataFrame([(11078, 1, 18)], ["OrderID", "ProductID", "UnitPrice", "Quantity"])
+new_order_details = spark.createDataFrame([(11078, 1, 18)], ["OrderID", "ProductID", "UnitPrice", "Quantity", id])
 
 deltaTable_orders.alias("orders").merge(
     new_order.alias("newOrder"),
     "orders.OrderID = orders")\
-    .whenMatchedUpdate(set = {"CustomerID" : "newOrder.CustomerID", "EmployeeID" : "newOrder.EmployeeID", "OrderDate" : "newOrder.OrderDate"})\
-    .whenNotMatchedInsert(values = {"OrderID" : "CustomerID" : "newOrder.CustomerID", "EmployeeID" : "newOrder.EmployeeID", "OrderDate" : "newOrder.OrderDate"})\
+    .whenMatchedUpdate(set = {"CustomerID" : "newOrder.1CustomerID", "EmployeeID" : "newOrder.EmployeeID", "OrderDate" : "newOrder.OrderDate"})\
+    .whenNotMatchedInsert(values = {"OrderID" : "CustomerID" : "newOrder.1CustomerID", "EmployeeID" : "newOrder.EmployeeID", "OrderDate" : "newOrder.OrderDate"})\
     .execute()
 
 deltaTable_order_details.alias("order_details").merge(
