@@ -4,7 +4,7 @@
 #     print(letra)
 
 nome = input('digite seu nome: ')
-for x in range(10):
+for x in range(101):
     print(f'{x+1} {nome}');
 
 # range(valor_inicial, valor_final, incremento)
