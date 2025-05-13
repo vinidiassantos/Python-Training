@@ -4,8 +4,7 @@ from __future__import divmod
 def funcao_principal():
     linha1 = formulario.lineEdit.text()
     linha2 = formulario.lineEdit_2.text()
-    linha3 = formulario.lineEdit_3.text()
-        for i in [1, 2, 3]:
+        for i in [1, 2]:
         print i
     
 def __new__(cls, original_value):
